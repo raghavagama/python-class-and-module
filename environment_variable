@@ -1,0 +1,28 @@
+''''importing os module and confirming your python.exe path folder''' 
+import os
+os.environ['PYTHONPATH']
+'C:\\MYMOD'
+
+'''importing sys module  to map directories of your module''' 
+import sys
+sys.path
+['', 'C:\\WINDOWS\\SYSTEM32\\python27.zip', 'C:\\Python27\\DLLs', 'C:\\Python27\\lib', 'C:\\Python27\\lib\\plat-win', 'C:\\Python27\\lib\\lib-tk', 'C:\\Python27', 'C:\\Python27\\lib\\site-packages', 'C:\\Python27\\lib\\site-packages\\win32', 'C:\\Python27\\lib\\site-packages\\win32\\lib', 'C:\\Python27\\lib\\site-packages\\Pythonwin', 'E:\\python27\\python', 'C:\\python27\\python']
+sys.path.append('E:\\python')
+sys.path
+['', 'C:\\WINDOWS\\SYSTEM32\\python27.zip', 'C:\\Python27\\DLLs', 'C:\\Python27\\lib', 'C:\\Python27\\lib\\plat-win', 'C:\\Python27\\lib\\lib-tk', 'C:\\Python27', 'C:\\Python27\\lib\\site-packages', 'C:\\Python27\\lib\\site-packages\\win32', 'C:\\Python27\\lib\\site-packages\\win32\\lib', 'C:\\Python27\\lib\\site-packages\\Pythonwin', 'E:\\python27\\python', 'C:\\python27\\python', 'E:\\python', 'E:\\python']
+
+import greetings
+//module was mapped to directories and ready to use
+os.chdir('E:\\python')
+
+import greetings
+greeting.sayings
+('hello', 'welcome', 'hi', 'hey', 'aloha')
+//if you are made a chage in input\ouput to reload  your module by using importlib module 
+//example ('hello', 'welcome', 'hi',  'aloha')
+
+import importlib
+importlib.reload(greetings)
+import greetings
+greeting.sayings
+('hello', 'welcome', 'hi',  'aloha')
