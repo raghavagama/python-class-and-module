@@ -1,0 +1,30 @@
+'''lists  and functions ''''
+
+bob=['smith bob',42,32000,'software'] #name,age,salary,job name
+sue=['roy sue',53,54000,'hardware']
+
+r= bob[0],sue[2] #tuple squences of number 0,1,2,3,4,5
+print(r)
+('smith bob', 54000)
+
+r1 = bob[-1] #reverse index in tuple or list .....-3,-2,-1
+print(r1)
+software
+
+r2= bob[0].split() #Split a string into a list where each word is a list item:
+print(r2)          #string.split(separator, maxsplit)
+['smith', 'bob']
+
+r3= bob[0].split()[-1] #we can extract a last name by spliting the name filed on balnks and grabbing the last part 
+print(r3)
+bob
+
+sue[2] *= 1.25
+print(sue)
+['roy sue', 53, 67500.0, 'hardware']
+
+
+
+
+
+
