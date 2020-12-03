@@ -24,7 +24,106 @@ print(sue)
 ['roy sue', 53, 67500.0, 'hardware']
 
 
+------USINGLISTS--------------------
+bob= ['bob smith',25000,500,'software']
+smith= ['rebecca sue ',34000,500,'hardware']
 
+people = [bob,smith]
+
+for listinput in people:
+	print(listinput)
+
+people[1][0]
+print(people)
+
+for listinput in people:
+	print(listinput[0].split()[-1])
+	listinput[1] *=0.25
+	
+
+for listinput in people:
+	print(listinput[1])
+
+pays = [listinput[1] for listinput in people]
+print(pays)
+
+pays = map((lambda x : x[1]),people)
+print(pays)
+
+
+sum(listinput[1] for listinput in people)
+people.append(['tom',230,400,'networking'])
+len(people)
+print(people)
+
+people[1][0]
+print(people)
+
+
+NAME,AGE,PAY = range(3)
+bob= ['bob smith',23,(25000,0)]
+e=bob[NAME]
+print(e)
+
+
+
+r=PAY,bob[PAY]
+print(r)
+
+-----------USING FILEDS ---------------------
+
+
+NAME,AGE,PAY = range(3)
+bob= ['bob smith',23,6000]
+e=bob[NAME]
+#print(e)
+
+bob = [['name', 'bob smith'], ['age', 23], ['pay', 1000]]
+sue = [['name', 'sue jhones'], ['age', 34], ['pay', 6000]]
+
+people = [bob, sue]
+
+
+print(people)
+
+for person in people:
+print(person)
+print(people)
+
+print(person[0][1],person[2][1])
+
+
+pays =[person[0][1] for person in people]
+
+print(pays)
+
+for person in people:
+	pays = [person[0][1].split()[-1]]
+	print(pays)
+
+for person in people:
+	for (name,value) in person:
+		if (name=='name'):
+			print(value)
+
+def field(record,label):
+	for (fname,fvalue) in record:
+		if(fname == label):
+			print (fvalue)
+
+field(bob,'name');
+
+
+def field(record, label):
+	for record in people:
+		for (fname, fvalue) in record:
+			if (fname == label):
+				print (fvalue)
+
+
+field(people, 'name');
+
+field(people,'age')
 
 
 
